@@ -20,6 +20,11 @@
   "module": "dist/hmans-signal.esm.js",
   "types": "dist/hmans-signal.cjs.d.ts",
   "license": "MIT",
+  "files": [
+    "dist/**",
+    "LICENSE",
+    "README.md"
+  ],
   "scripts": {
     "build": "preconstruct build"
   },
