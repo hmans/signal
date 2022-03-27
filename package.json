@@ -1,7 +1,7 @@
 {
   "name": "@hmans/signal",
   "private": false,
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "A super duper simple signal implementation.",
   "author": {
     "name": "Hendrik Mans",
@@ -27,7 +27,9 @@
   ],
   "scripts": {
     "build": "preconstruct build",
-    "test": "yarn jest"
+    "test": "yarn jest",
+    "ci": "yarn build && yarn test",
+    "release": "yarn ci && yarn publish"
   },
   "devDependencies": {
     "@babel/preset-env": "^7.16.11",
