@@ -7,8 +7,6 @@
 
 A super duper simple signal implementation that I use in many of my other projects. It doesn't do anything terribly exciting, but provides some API niceties for added convenience.
 
-### tl;dr
-
 ```tsx
 import { Signal } from "@hmans/signal"
 
