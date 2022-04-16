@@ -17,9 +17,17 @@ Signals represent distinct signals -- or events -- that allow interested parties
 
 ## Usage
 
-```tsx
+```js
 import { Signal } from "@hmans/signal"
 
+const signal = new Signal()
+signal.add(() => console.log("Hi"))
+signal.emit()
+```
+
+If you're using TypeScript, you can specify a payload type:
+
+```ts
 const signal = new Signal<number>()
 signal.add((n) => console.log(n))
 signal.emit()
@@ -27,7 +35,7 @@ signal.emit()
 
 Callbacks are added through `add` and removed through `remove`.
 
-```tsx
+```ts
 const callback = (n) => console.log(n)
 signal.add(callback)
 signal.remove(callback)
@@ -35,20 +43,20 @@ signal.remove(callback)
 
 `clear` discards all registered listeners:
 
-```tsx
+```ts
 signal.clear()
 ```
 
 Signals optionally accept a listener through their constructor (just a bit of syntactical sugar for convenience):
 
-```tsx
+```ts
 const signal = new Signal(() => console.log("I've been signalled!"))
 signal.emit()
 ```
 
 Interactions with `Signal` instances can be chained:
 
-```tsx
+```ts
 new Signal<string>()
   .add((name) => console.log(`Hello ${name}!`))
   .add((name) => console.log(`Hi again ${name}!`))
