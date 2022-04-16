@@ -1,6 +1,11 @@
+[![Tests](https://github.com/hmans/signal/actions/workflows/tests.yml/badge.svg)](https://github.com/hmans/signal/actions/workflows/tests.yml)
+[![Version](https://img.shields.io/npm/v/@hmans/signal)](https://www.npmjs.com/package/@hmans/signal)
+[![Downloads](https://img.shields.io/npm/dt/@hmans/signal.svg)](https://www.npmjs.com/package/@hmans/signal)
+[![Bundle Size](https://img.shields.io/bundlephobia/min/@hmans/signal?label=bundle%20size)](https://bundlephobia.com/result?p=@hmans/signal)
+
 # @hmans/signal
 
-## A super duper simple signal implementation.
+A super duper simple signal implementation that I use in many of my other projects. It doesn't do anything terribly exciting, but provides some API niceties for added convenience.
 
 ### tl;dr
 
