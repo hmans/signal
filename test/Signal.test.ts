@@ -4,7 +4,7 @@ describe("Signal", () => {
   it("provides a signal that listeners can be added to which are then called back once the signal is invoked", () => {
     let proof = ""
 
-    const signal = Signal<string>()
+    const signal = new Signal<string>()
     signal.add((payload) => (proof = payload))
     signal.emit("it works")
 
@@ -16,7 +16,7 @@ describe("Signal", () => {
       let proof = ""
       const listener = (payload: string) => (proof = payload)
 
-      const signal = Signal<string>()
+      const signal = new Signal<string>()
       signal.add(listener)
       signal.emit("it works")
       expect(proof).toEqual("it works")
@@ -32,7 +32,7 @@ describe("Signal", () => {
       let proof = ""
       const listener = (payload: string) => (proof = payload)
 
-      const signal = Signal<string>()
+      const signal = new Signal<string>()
       signal.add(listener)
       signal.emit("it works")
       expect(proof).toEqual("it works")
@@ -41,5 +41,13 @@ describe("Signal", () => {
       signal.emit("it still works")
       expect(proof).toEqual("it works")
     })
+  })
+
+  it("supports signals without payloads", () => {
+    let count = 0
+    const signal = new Signal()
+    signal.add(() => count++)
+    signal.emit()
+    expect(count).toEqual(1)
   })
 })
