@@ -1,4 +1,4 @@
-export function Signal<Payload>() {
+export function Signal<Payload extends any = void>() {
   type Listener = (payload: Payload) => void
 
   const listeners = new Array<Listener>()
