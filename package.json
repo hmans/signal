@@ -34,6 +34,7 @@
   "devDependencies": {
     "@babel/preset-env": "^7.16.11",
     "@babel/preset-typescript": "^7.16.7",
+    "@changesets/cli": "^2.22.0",
     "@preconstruct/cli": "^2.1.5",
     "@types/jest": "^27.4.1",
     "jest": "^27.5.1",
