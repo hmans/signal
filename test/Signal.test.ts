@@ -50,4 +50,21 @@ describe("Signal", () => {
     signal.emit()
     expect(count).toEqual(1)
   })
+
+  it("allows things to be chained", () => {
+    let count = 0
+
+    new Signal()
+      .add(() => count++)
+      .add(() => (count += 2))
+      .emit()
+
+    expect(count).toEqual(3)
+  })
+
+  it("accepts a function as a constructor argument", () => {
+    let count = 0
+    new Signal(() => count++).emit()
+    expect(count).toEqual(1)
+  })
 })
