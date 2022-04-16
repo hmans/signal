@@ -7,6 +7,16 @@
 
 A super duper simple signal implementation that I use in many of my other projects. It doesn't do anything terribly exciting, but provides some API niceties for added convenience.
 
+Signals represent distinct signals -- or events -- that allow interested parties to add callbacks to them that will be evoked whenever the signal is emitted. Unlike `eventemitter` and friends, distinct signals are expressed as separate instances -- there is no key-based routing (in fact, there aren't even any keys to begin with!)
+
+## Projects using @hmans/signal
+
+- [miniplex](https://github.com/hmans/miniplex)
+- [controlfreak](https://github.com/hmans/controlfreak)
+- [Trinity](https://github.com/hmans/trinity)
+
+## Usage
+
 ```tsx
 import { Signal } from "@hmans/signal"
 
